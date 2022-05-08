@@ -1,8 +1,7 @@
 [build]
-  command="ng build"
-  publish="dist/angular-quickstart"
+    functions="functions"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+    [[redirects]]
+        to="/.netlify/functions/api/:splat"
+        from="/*"
+        status=200
