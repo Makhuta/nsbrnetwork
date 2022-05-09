@@ -5,12 +5,9 @@ const app = express();
 const router = express.Router();
 
 router.get("/*", (req, res) => {
-  res.json({
-    test: "test"
-  });
-  console.info(req.url)
+  res.json({ test: req.url });
+  console.info(req.url);
 });
 
 app.use("/", router);
-
 module.exports.handler = serverless(app);
