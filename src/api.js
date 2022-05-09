@@ -11,6 +11,6 @@ router.get("/*", (req, res) => {
   console.info(req.url)
 });
 
-app.use("/.netlify/functions/api", router);
+app.use("/", router);
 
 module.exports.handler = serverless(app);
